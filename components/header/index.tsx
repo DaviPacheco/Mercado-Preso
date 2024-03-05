@@ -30,7 +30,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-zambira sticky top-0 z-20 mx-auto w-full py-8 px-4 md:p-0 mb-8">
+    <header className="bg-zambira sticky top-0 z-20 mx-auto w-full py-8 px-4 md:p-0">
       <div className="flex flex-wrap items-center justify-between w-full md:w-10/12 mx-auto">
         <Link href="/" className="flex gap-4 items-center">
           <Image

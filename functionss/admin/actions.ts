@@ -3,24 +3,23 @@ import prisma from "@/lib/db"
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
-const itensPerPage=6;
+
 
 export async function fetchMembers(currentPage:number) {
     
-    const offset = (currentPage-1)*itensPerPage;
+    
     
     const members = await prisma.membro.findMany({
         orderBy:{
             id:"asc",
         },
-        take: itensPerPage,
-        skip : offset,
+       
+      
     });
 
     const count= await prisma.membro.count();
-    const totalPages = Math.ceil(count / 5)
 
-    return{members, totalPages};
+    return{members};
     
 }
 

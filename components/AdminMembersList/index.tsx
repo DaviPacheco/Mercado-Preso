@@ -1,7 +1,7 @@
 import AdminManageMembers from "../admin-members-table";
 import MembersTable from "../members-table";
 import { Membro } from "@prisma/client";
-export default function AdminMembersList({members, totalPages, currentPage}: {members: Membro[], totalPages:number, currentPage:number}) {
+export default function AdminMembersList({members}: {members: Membro[]}) {
   return (
     <div
       

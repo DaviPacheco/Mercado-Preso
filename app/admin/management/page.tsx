@@ -13,7 +13,7 @@ export default async function Page({searchParams} : MembroProp){
 
     const currentPage = Number(searchParams?.page) || 1
 
-    const {members, totalPages} = await fetchMembers(currentPage)
+    const {members} = await fetchMembers(currentPage)
 
     return(
         <div className="bg-zambira min-h-screen w-full space-y-8 px-2 flex flex-col pb-16 items-center ">
@@ -23,7 +23,7 @@ export default async function Page({searchParams} : MembroProp){
                    NOVO MEMBRO 
                 </button>
             </Link>
-            <AdminMembersList members={members} totalPages={totalPages}  currentPage={currentPage}/>
+            <AdminMembersList members={members}/>
 
         </div>
     )
